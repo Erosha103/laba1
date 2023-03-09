@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CFB Encryption and Decryption</title>
+</head>
+<body>
+    <h1>CFB Encryption and Decryption</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="plaintext">Текст:</label><br>
+        <textarea id="plaintext" name="plaintext" rows="4" cols="50"></textarea><br>
+
+        <label for="key">Key:</label><br>
+        <input type="text" id="key" name="key"><br>
+
+        <label for="iv">IV:</label><br>
+        <input type="text" id="iv" name="iv"><br>
+
+        <input type="submit" name="encrypt" value="Зашифровать">
+        </form>
+
+{% if key %}
+<h2>Encrypted text:</h2>
+<p>{{ ciphertext }}</p>
+<h2>Key:</h2>
+<p>{{ key }}</p>
+{% endif %}
+</body>
+</html>
+
+
+
+
+ <div>
+     {% if start %}
+     <div>
+         <p><output>{{start}}</output></p>
+     </div>
+     {% endif%}
+ </div>
+ <div>
+     {% if ans %}
+     <div>
+         <p><output>{{ans}}</output></p>
+     </div>
+     {% endif%}
+ </div>
+ </form>
+</body>
+</html>
